@@ -1,0 +1,2 @@
+*   When setting up MySQL connection, a stale .pyc settings file was causing the auth to always be denied. Fixed by just removing the .pyc
+
