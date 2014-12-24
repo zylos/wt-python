@@ -1,0 +1,2 @@
+*   Using https://github.com/dcramer/django-uuidfield to provide uuidfields for models. Seems fairly highly recommended and better than using a CharField with default set via a UUID generating function.
+

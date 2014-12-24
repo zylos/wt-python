@@ -1,2 +1,6 @@
 *   When setting up MySQL connection, a stale .pyc settings file was causing the auth to always be denied. Fixed by just removing the .pyc
 
+*   Poorly designed consumer router constantly killed any TCP(aka SSH) connection over 15 mins long. Kept killing both remote terms and sshfs. Setup OpenVPN onto remote dev server, connecting over udp tunnel.
+
+*   Initially added UUIDField to models as non-primary key. Realized mistake after running migration, changed, ran new migration. Migration failed due to something relating to being a custom field. Was fixed by dropping all tables, wiping migrations folder, and redoing migrations from clean state.
+

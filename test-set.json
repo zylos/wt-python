@@ -1,0 +1,91 @@
+{
+   "license_title":"License Not Specified",
+   "maintainer":null,
+   "private":false,
+   "maintainer_email":null,
+   "num_tags":6,
+   "id":"c447002d-51df-46d9-a105-dda94dfd6083",
+   "metadata_created":"2012-05-30T22:09:43.855645",
+   "relationships":[
+
+   ],
+   "license":"License Not Specified",
+   "metadata_modified":"2013-12-14T18:00:26.035047",
+   "author":"U.S. Food and Drug Administration",
+   "author_email":null,
+   "state":"active",
+   "version":null,
+   "license_id":"notspecified",
+   "type":"dataset",
+   "resources":[
+      {
+         "resource_group_id":"2cb1660b-f258-446c-9729-813c5f55e14f",
+         "cache_last_updated":null,
+         "package_id":"c447002d-51df-46d9-a105-dda94dfd6083",
+         "webstore_last_updated":null,
+         "id":"b7785fb5-839d-474b-9a79-f44b657926dc",
+         "size":null,
+         "last_modified":null,
+         "hash":"",
+         "description":"",
+         "format":"CSV",
+         "tracking_summary":{
+            "total":0,
+            "recent":0
+         },
+         "mimetype_inner":null,
+         "mimetype":null,
+         "cache_url":null,
+         "name":"CSV ",
+         "created":"2012-05-30T18:09:43.908810",
+         "url":"http://www.fda.gov/downloads/ForIndustry/DataStandards/StructuredProductLabeling/ucm241597.zip",
+         "webstore_url":null,
+         "position":0,
+         "resource_type":null
+      }
+   ],
+   "num_resources":1,
+   "tags":[
+      "community health",
+      "drug",
+      "fda",
+      "label",
+      "label repository",
+      "labels fda gov"
+   ],
+   "tracking_summary":{
+      "total":0,
+      "recent":0
+   },
+   "groups":[
+      "503f8f21-5e02-453c-9e43-e1c403d40411"
+   ],
+   "organization":null,
+   "name":"drug-label-data",
+   "isopen":false,
+   "notes_rendered":"<p>This file contains the data elements used for searching the FDA Online Data Repository including proprietary name, active ingredients, marketing application number or regulatory citation, National Drug Code, and company name.\n</p>",
+   "url":"http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/ucm240580.htm",
+   "ckan_url":"http://hub.healthdata.gov/dataset/drug-label-data",
+   "notes":"This file contains the data elements used for searching the FDA Online Data Repository including proprietary name, active ingredients, marketing application number or regulatory citation, National Drug Code, and company name.",
+   "owner_org":null,
+   "ratings_average":null,
+   "extras":{
+      "Coverage Period Start":"2011-01-01 00:00:00",
+      "Unit of Analysis":"drug labels",
+      "hd2-workflow-id":"307",
+      "Agency":"Department of Health & Human Services",
+      "Bureau Code":"009:10",
+      "Geographic Granularity":"Country",
+      "Technical Documentation":"http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/default.htm",
+      "Collection Frequency":"Daily",
+      "Agency Program URL":"http://www.fda.gov/ForIndustry/DataStandards/StructuredProductLabeling/default.htm",
+      "Date Updated":"2011-02-01 00:00:00",
+      "Date Released":"2011-02-01 00:00:00",
+      "author_id":"http://healthdata.gov/id/agency/fda",
+      "Migration Notes JSON":"{\"datadotgovid1\": \"4422\", \"Coverage Period Start\": \"2011\", \"datadotgovid2\": \"g8u6-vdnb\", \"Coverage Period End\": \"ongoing\"}",
+      "Subject Area 1":"Treatments"
+   },
+   "ratings_count":0,
+   "title":"FDA Drug Label Data",
+   "revision_id":"09c3433c-24ba-40f4-899e-bc567a4bcfe4"
+}
