@@ -3,7 +3,7 @@ from uuidfield import UUIDField
 
 # Create your models here.
 class Tag(models.Model):
-    name = models.CharField(max_length=32)
+    name = models.CharField(max_length=32, db_index=True, unique=True)
 
     def __unicode__(self):
         return self.name
@@ -25,18 +25,18 @@ class License(models.Model):
 
 class Resource(models.Model):
     uuid  = UUIDField(auto=True, primary_key=True)
-    group = models.ForeignKey(Group)
+    group = models.ForeignKey(Group, null=True)
 
     url  = models.URLField(max_length=255)
     name = models.CharField(max_length=32)
     desc = models.TextField()
-    created_on  = models.DateTimeField()
-    modified_on = models.DateTimeField()
+    created_on  = models.DateTimeField(auto_now_add=True, blank=True)
+    modified_on = models.DateTimeField(auto_now=True, blank=True)
 
     # Assuming we won't get files larger than 2GB
     #TODO# Restrist charfields with options. Left for later due to needing
     ###### to gather a large list of types up.
-    file_size     = models.PositiveIntegerField() 
+    file_size     = models.PositiveIntegerField(default=0) 
     file_hash     = models.CharField(max_length=32)
     file_type     = models.CharField(max_length=32)
     file_mimetype = models.CharField(max_length=32)

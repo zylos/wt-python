@@ -4,3 +4,4 @@
 
 *   Initially added UUIDField to models as non-primary key. Realized mistake after running migration, changed, ran new migration. Migration failed due to something relating to being a custom field. Was fixed by dropping all tables, wiping migrations folder, and redoing migrations from clean state.
 
+*   When adding a DataSetExtra via deserialization, dataset column is null. Had to dig into source of BaseSerializer, found that via kwargs allows adding manual fields to the object being saved. Used that to add in the dataset the extra belonged to.

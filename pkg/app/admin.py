@@ -23,10 +23,7 @@ class DataSetAdmin(admin.ModelAdmin):
                 DataSetResourceInline ]
 
 class TagAdmin(admin.ModelAdmin):
-    search_fields = ('name','name')
-
-#class GroupAdmin(admin.ModelAdmin):
-    
+    search_fields = ('name', )
 
 class LicenseAdmin(admin.ModelAdmin):
     list_display = ('title', 'license_type')
