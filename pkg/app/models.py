@@ -99,6 +99,6 @@ class DataSetExtra(models.Model):
 
 class DataSetRating(models.Model):
     dataset = models.ForeignKey(DataSet)
-    #user_id = models.ForeignKey(User)
+    user = models.ForeignKey('auth.User', related_name='ratings')
     rating  = models.FloatField()
 

@@ -23,6 +23,9 @@ SECRET_KEY = '9*bbf9l)7wtqts3wlqgdxkil*1&8sq)0qzt9h&mv0q&!lg4=r5'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+TEMPLATE_DIRS = (
+    '/var/www/tests/wt-python/templates',
+)
 
 ALLOWED_HOSTS = []
 
@@ -38,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'social_auth',
     'app'
 )
 
@@ -77,6 +81,22 @@ REST_FRAMEWORK = {
         #'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+AUTHENTICATION_BACKENDS = (
+    'social_auth.backends.google.GoogleOAuth2Backend',
+    'social_auth.backends.google.GoogleBackend',
+    'social_auth.backends.OpenIDBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+LOGIN_URL          = '/login/'
+LOGIN_REDIRECT_URL = '/logged_in/'
+LOGIN_ERROR_URL    = '/login_error/'
+GOOGLE_OAUTH2_CLIENT_ID      = '449322593511-l2ah433tuo17uiner36td9k6i94j9jtr.apps.googleusercontent.com'
+GOOGLE_OAUTH2_CLIENT_SECRET  = 'lAgr1g0XFryxnUjAT6E_ZlcU'
+
+SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
+SESSION_SERIALIZER='django.contrib.sessions.serializers.PickleSerializer'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/

@@ -23,6 +23,9 @@ urlpatterns = [
     url(r'^dataset/(?P<pk>[0-9a-z]+)/extra/(?P<pk_extra>[0-9a-zA-Z_\-\s]+)$', 
         views.DataSetExtraDetail.as_view(),
         name='dataset-extra-detail'),
+    url(r'^dataset/(?P<pk>[0-9a-z]+)/rate/(?P<rating>[0-9])$', 
+        views.DataSetRate.as_view(),
+        name='dataset-rate'),
 
     url(r'^resource/$', 
         views.ResourceList.as_view(), 
@@ -47,4 +50,9 @@ urlpatterns = format_suffix_patterns(urlpatterns)
 
 urlpatterns += [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'', include('social_auth.urls')),
+
+    url(r'^logged_in/$', views.logged_in, name='logged_in'),
+    url(r'^login_error/$', views.login_error, name='login_error'),
+    url(r'^logout/$', views.logout, name='logout'),
 ]
